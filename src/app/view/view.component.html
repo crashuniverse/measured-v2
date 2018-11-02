@@ -1,0 +1,8 @@
+<div>
+  The weights list here.
+  <ul>
+    <li *ngFor="let weight of weights | async">
+      {{ weight | json }}
+    </li>
+  </ul>
+</div>
