@@ -1,9 +1,4 @@
-<div>
-  The weights list here.
-  <ul>
-    <li *ngFor="let weight of recentWeights | async">
-      <span>{{ weight.createdAt }}</span>
-      <span>{{ weight.text }}</span>
-    </li>
-  </ul>
+<h3>Weights</h3>
+<div class="chart-container">
+  <canvas #canvas></canvas>
 </div>
