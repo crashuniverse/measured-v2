@@ -1,11 +1,16 @@
 <form>
-  <div>
-    <label for="weight">Save weight</label>
-  </div>
-  <div>
-    <input type="text" name="weight" placeholder="Enter current weight here" />
-  </div>
-  <div>
-    <button (click)="AddWeight()">Save</button>
-  </div>
+  <form (submit)="AddWeight()">
+    <div class="alert" *ngIf="isSubmitted">
+      <div class="success" *ngIf="!error">Weight saved successfully</div>
+      <div class="error" *ngIf="error">There was a problem in saving weights</div>
+    </div>
+    <div>
+      <label for="weight">Save weight</label>
+      <input type="text" name="weight" placeholder="Enter current weight here" required
+        [(ngModel)]="weight.text" />
+    </div>
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
 </form>

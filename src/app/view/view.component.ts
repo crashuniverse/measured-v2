@@ -12,7 +12,6 @@ import { Chart } from 'chart.js';
 
 export class ViewComponent implements OnInit {
   @ViewChild('canvas') canvas: ElementRef;
-
   weightsRef: AngularFireList<any[]>;
   weights: Observable<any[]>;
   recentWeights: Observable<RecentWeightItem[]>;
