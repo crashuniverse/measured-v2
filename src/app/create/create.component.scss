@@ -1,0 +1,60 @@
+form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border: solid 1px #cccccc;
+  margin: 10px 0;
+  font-size: 1em;
+  padding: 10px;
+  outline: none;
+
+  &:focus {
+    border: solid 1px #000000;
+  }
+
+  @media only screen and (min-width: 415px) {
+    width: 300px;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+
+  @media only screen and (min-width: 415px) {
+    width: auto;
+    min-width: 100px;
+  }
+}
+
+.alert {
+  display: inline-block;
+  background-color: #7f8c8d;
+  padding: 10px;
+  width: auto;
+  min-width: 300px;
+  text-align: center;
+
+  &.success {
+    background-color: #27ae60;
+    color: #ffffff;
+  }
+
+  &.error {
+    background-color: #c0392b;
+    color: #ffffff;
+  }
+}

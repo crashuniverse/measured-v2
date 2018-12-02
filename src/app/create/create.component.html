@@ -1,16 +1,16 @@
 <form>
-  <form (submit)="AddWeight()">
-    <div class="alert" *ngIf="isSubmitted">
-      <div class="success" *ngIf="!error">Weight saved successfully</div>
-      <div class="error" *ngIf="error">There was a problem in saving weights</div>
+  <form (submit)="AddWeight()" ngNativeValidate>
+    <div *ngIf="isSubmitted">
+      <div class="alert success" *ngIf="!error">Weight saved successfully</div>
+      <div class="alert error" *ngIf="error">There was a problem in saving weights</div>
     </div>
     <div>
       <label for="weight">Save weight</label>
-      <input type="text" name="weight" placeholder="Enter current weight here" required
-        [(ngModel)]="weight.text" />
+      <input id="weight" class="input" type="text" name="weight" placeholder="Enter current weight here"
+        required autocomplete="off" [(ngModel)]="weight.text" />
     </div>
     <div>
-      <button type="submit">Save</button>
+      <button class="button" type="submit">Save</button>
     </div>
   </form>
 </form>
